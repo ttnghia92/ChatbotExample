@@ -1,0 +1,55 @@
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- thutuchanhchinh
+- benhvien
+- xinviec
+templates:
+  utter_greet:
+  - text: Hey! How are you?
+    buttons:
+    - title: great
+      payload: utter_iamabot
+    - title: super sad
+      payload: utter_goodbye
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_traloi_tthc:
+  - text: Ban den duong 3 thang 2 gap Trung tam PV HCC nhe
+  - text: Bo phan Mot cua o do rat tot
+  - text: Ban co the tra cuu ho so bang di dong nhe
+  - text: He thong dap ung day du tien nghi day
+  utter_traloi_benhvien:
+  - text: Den BV da khoa tuyen tinh se phuc vu tot nhat
+  - text: Ban co the hen lich kham bang sms hay tren cong
+  - text: Co bao hiem se giam chi phi nhieu hon
+  utter_traloi_xinviec:
+  - text: VNPT dang tuyen dung, can trinh do CNTT
+  - text: Ban tham gia nhieu hoat dong hay khong
+  - text: Dac biet co nhieu ban nu lam day
+  - text: Co quan co nhung chuyen di du lich rat thu vi
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_traloi_tthc
+- utter_traloi_benhvien
+- utter_traloi_xinviec
+- action_hello_world
