@@ -1,56 +1,32 @@
-## happy path
-* greet
-  - utter_greet
-* mood_great
-  - action_hello_world
-
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
 ## sad path 2
 * greet
   - utter_greet
+* start
+  - utter_start
+* select_film
+  - utter_select_film
+* year
+  - utter_year
+* language
+  - utter_language
+  - utter_result_1
+  - utter_result_2
+  - utter_result_3
+  - utter_result_4
 * mood_unhappy
   - utter_cheer_up
   - utter_did_that_help
-* deny
-  - utter_goodbye
-
-## say goodbye
 * goodbye
   - utter_goodbye
-
-## bot challenge
-* bot_challenge
-  - utter_iamabot
-
-## tthc path
-* greet
-	- utter_greet
-* thutuchanhchinh
-	- utter_traloi_tthc
-* benhvien
-	- utter_traloi_benhvien
-* xinviec
-	- utter_traloi_xinviec
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
-* goodbye
+  - utter_chon_do_an
+  - utter_menu
+* food_taste
+  - utter_food_taste
+* drinks
+  - utter_drinks
+* end
+  - utter_end
   - utter_goodbye
-
-## benhvien path
-* benhvien
-	- utter_traloi_benhvien
-
-## xinviec path
-* xinviec
-	- utter_traloi_xinviec
+## say start
+* start
+  - utter_start

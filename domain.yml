@@ -5,51 +5,136 @@ intents:
 - deny
 - mood_great
 - mood_unhappy
-- bot_challenge
-- thutuchanhchinh
-- benhvien
-- xinviec
+- start
+- year
+- select_film
+- language
+- menu
+- food_taste
+- drinks
+- end
 templates:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Xin chào! 🤣 Tôi rất vui khi được giúp bạn tìm phim hoặc chương trình TV?
     buttons:
-    - title: great
-      payload: utter_iamabot
-    - title: super sad
-      payload: utter_goodbye
+    - title: Start
+      payload: /start
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+  - text: 'Đây là một cái gì đó để cổ vũ bạn:'
+    image: https://miro.medium.com/max/1024/1*e8v1xC0NTgoduh_ei9F7Pw.png
   utter_did_that_help:
-  - text: Did that help you?
+  - text: Ảnh ở trên có giúp được bạn không?
   utter_happy:
-  - text: Great, carry on!
+  - text: Great carry on!
   utter_goodbye:
-  - text: Bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_traloi_tthc:
-  - text: Ban den duong 3 thang 2 gap Trung tam PV HCC nhe
-  - text: Bo phan Mot cua o do rat tot
-  - text: Ban co the tra cuu ho so bang di dong nhe
-  - text: He thong dap ung day du tien nghi day
-  utter_traloi_benhvien:
-  - text: Den BV da khoa tuyen tinh se phuc vu tot nhat
-  - text: Ban co the hen lich kham bang sms hay tren cong
-  - text: Co bao hiem se giam chi phi nhieu hon
-  utter_traloi_xinviec:
-  - text: VNPT dang tuyen dung, can trinh do CNTT
-  - text: Ban tham gia nhieu hoat dong hay khong
-  - text: Dac biet co nhieu ban nu lam day
-  - text: Co quan co nhung chuyen di du lich rat thu vi
+  - text: goodbye 😢
+  utter_start:
+  - text: Bạn thích thể loại phim nào?
+    buttons:
+        - title: Phim lẻ
+          payload: /select_film
+        - title: Phim bộ
+          payload: /select_film
+        - title: Phim thuyết minh
+          payload: /select_film
+        - title: Phim chiếu rạp
+          payload: /select_film
+  utter_year:
+  - text: Ngôn ngữ phim nào thế bạn?
+    buttons:
+        - title: English
+          payload: /language
+        - title: Spanish
+          payload: /language
+        - title: Vietnamese
+          payload: /language
+        - title: French
+          payload: /language
+        - title: German
+          payload: /language
+        - title: Chinese
+          payload: /language
+        - title: Korean
+          payload: /language
+        - title: Japanese
+          payload: /language
+  utter_select_film:
+    - text: Bạn chọn năm sản xuất cho phim đi?
+      buttons:
+        - title: 2019
+          payload: /year
+        - title: 2018
+          payload: /year
+        - title: 2017
+          payload: /year
+        - title: 2016
+          payload: /year
+  utter_language:
+    - text: Đây là những gì tôi tìm thấy cho bạn 😉!
+  utter_result_1:
+    - text: '1. QUÁ NHANH QUÁ NGUY HIỂM: HOBBS VÀ SHAW'
+      image: http://image.phimmoi.net/film/8359/poster.medium.jpg
+  utter_result_2:
+    - text: '2. NA TRA: MA ĐỒNG GIÁNG THẾ'
+      image: http://image.phimmoi.net/film/9270/poster.medium.jpg
+  utter_result_3:
+    - text: '3. SIÊU LỪA ĐẢO'
+      image: http://image.phimmoi.net/film/2414/poster.medium.jpg
+  utter_result_4:
+    - text: '4. CÂU CHUYỆN ĐỒ CHƠI (PHẦN 4)'
+      image: http://image.phimmoi.net/film/8163/poster.medium.jpg
+  utter_chon_do_an:
+    - text: 'Bạn đợi tý! Bạn chọn đồ ăn khi xem phim đi:'
+      image: https://www.cgv.vn/skin/frontend/cgv/default/images/concesstion/header-menu-concession.png
+  utter_menu:
+    - text: Mời bạn lựa chọn menu bên dưới?
+      buttons:
+        - title: Đồ ăn
+          payload: /food_taste
+        - title: Nước uống
+          payload: /food_taste
+  utter_food_taste:
+    - text: Bạn thích vị gì?
+      buttons:
+        - title: Vị mặn
+          payload: /drinks
+        - title: Vị ngọt
+          payload: /drinks
+        - title: Vị phô mai
+          payload: /drinks
+        - title: Vị caramel
+          payload: /drinks
+  utter_drinks:
+    - text: Bạn thích uống nước nào nhỉ?
+      buttons:
+        - title: Hồng trà
+          payload: /end
+        - title: Nước ép trái cây
+          payload: /end
+        - title: Nước soda
+          payload: /end
+        - title: Coca cola
+          payload: /end
+  utter_end:
+    - text: 'Tôi đã hỏi xong rồi đó. Chúc bạn xem phim vui vẻ! Đây là vé của bạn.'
+      image: https://i2.wp.com/zabo.vn/wp-content/uploads/2019/05/ve-xem-phim-cgv_zabo.jpg?fit=800%2C800&ssl=1
 actions:
 - utter_greet
 - utter_cheer_up
 - utter_did_that_help
 - utter_happy
 - utter_goodbye
-- utter_iamabot
-- utter_traloi_tthc
-- utter_traloi_benhvien
-- utter_traloi_xinviec
 - action_hello_world
+- utter_start
+- utter_year
+- utter_select_film
+- utter_language
+- utter_result_1
+- utter_result_2
+- utter_result_3
+- utter_result_4
+- utter_chon_do_an
+- utter_menu
+- utter_food_taste
+- utter_drinks
+- utter_end

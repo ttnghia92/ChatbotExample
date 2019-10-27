@@ -1,22 +1,23 @@
+## intent:greet
+- hey
+- hello
+- hi
+- good morning
+- good evening
+- hey there
+
+## intent:goodbye
+- bye
+- goodbye
+- see you around
+- see you later
+
 ## intent:affirm
 - yes
 - indeed
 - of course
 - that sounds good
 - correct
-
-## intent:benhvien
-- suc khoe ban nhu the nao
-- trung tam y te
-- ban co muon lay so truoc khong?
-- ban co mang theo bao hiem chu?
-- bao hiem chi bao nhieu phan tram
-
-## intent:bot_challenge
-- are you a bot?
-- are you a human?
-- am I talking to a bot?
-- am I talking to a human?
 
 ## intent:deny
 - no
@@ -25,21 +26,6 @@
 - don't like that
 - no way
 - not really
-
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
-
-## intent:greet
-- hey
-- hello
-- hi
-- good morning
-- good evening
-- hey there
-- Xin chào
 
 ## intent:mood_great
 - perfect
@@ -63,18 +49,48 @@
 - extremely sad
 - so sad
 
-## intent:thutuchanhchinh
-- trung tam phuc vu hanh chinh cong
-- giay bien nhan
-- nop ho so
-- in giay bien nhan khong?
-- huong dan trinh tu thuc hien
+## intent:start
+- Start
+- start
 
-## intent:xinviec
-- Ban tot nghiep loai gi
-- Hoc vi cua ban
-- Xep loai tot nghiep ra sao
-- Lam gio hanh chinh hay khong?
-- Que ban o dau nhi
-- Ban co muon la xa nha khong
-- Ban muon luong bao nhieu
+## intent:year
+- 2019
+- 2018
+- 2017
+- 2016
+
+## intent:select_film
+- odd film
+- series movie
+- demos
+- movie theaters
+
+## intent:language
+- English
+- Spanish
+- Vietnamese
+- French
+- German
+- Chinese
+- Korean
+- Japanese
+
+## intent:menu
+- eat
+- drink
+
+## intent:food_taste
+- salty
+- sweet
+- cheese flavor
+- caramel flavor
+
+## intent:drinks
+- black tea
+- fruit juice
+- soda
+- coca cola
+- cacao milo
+
+## intent:end
+- the end
