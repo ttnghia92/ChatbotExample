@@ -1,0 +1,1278 @@
+2019-10-04 21:45:56,732 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-10-04 23:19:42,277 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-04 23:19:42,388 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-04 23:22:37,718 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-04 23:26:29,531 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1045, in create_server
+    sock.bind(sa)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1049, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-04 23:26:41,564 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1045, in create_server
+    sock.bind(sa)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1049, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-04 23:33:09,528 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 422, in run_forever
+    self._run_once()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1396, in _run_once
+    event_list = self._selector.select(timeout)
+  File "f:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "f:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-04 23:53:03,355 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-04 23:53:03,453 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 20:39:08,585 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 742, in serve
+    trigger_events(before_start, loop)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 604, in trigger_events
+    loop.run_until_complete(result)
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 199, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 233, in load_agent
+    remote_storage=remote_storage,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 876, in load_local_model
+    remote_storage=remote_storage,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 364, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 45, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 246, in __init__
+    self._load_interpreter()
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 264, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\model.py", line 302, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\model.py", line 329, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\components.py", line 433, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\registry.py", line 181, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\classifiers\embedding_intent_classifier.py", line 708, in load
+    b_in = tf.get_collection("intent_placeholder")[0]
+IndexError: list index out of range
+2019-10-05 20:48:34,263 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 742, in serve
+    trigger_events(before_start, loop)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 604, in trigger_events
+    loop.run_until_complete(result)
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 199, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 233, in load_agent
+    remote_storage=remote_storage,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 876, in load_local_model
+    remote_storage=remote_storage,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 364, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 45, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 246, in __init__
+    self._load_interpreter()
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 264, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\model.py", line 302, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\model.py", line 329, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\components.py", line 433, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\registry.py", line 181, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\classifiers\embedding_intent_classifier.py", line 708, in load
+    b_in = tf.get_collection("intent_placeholder")[0]
+IndexError: list index out of range
+2019-10-05 20:50:20,128 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 742, in serve
+    trigger_events(before_start, loop)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 604, in trigger_events
+    loop.run_until_complete(result)
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\run.py", line 199, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 233, in load_agent
+    remote_storage=remote_storage,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 876, in load_local_model
+    remote_storage=remote_storage,
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\agent.py", line 364, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 45, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 246, in __init__
+    self._load_interpreter()
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\core\interpreter.py", line 264, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\model.py", line 302, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\model.py", line 329, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\components.py", line 433, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\registry.py", line 181, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "f:\anaconda3\envs\rasa\lib\site-packages\rasa\nlu\classifiers\embedding_intent_classifier.py", line 708, in load
+    b_in = tf.get_collection("intent_placeholder")[0]
+IndexError: list index out of range
+2019-10-05 21:16:43,252 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 422, in run_forever
+    self._run_once()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1396, in _run_once
+    event_list = self._selector.select(timeout)
+  File "f:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "f:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-05 21:20:00,892 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:21:27,649 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 422, in run_forever
+    self._run_once()
+  File "f:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1396, in _run_once
+    event_list = self._selector.select(timeout)
+  File "f:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "f:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "f:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-05 21:24:46,815 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:24:46,902 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:26:07,081 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:26:07,155 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:27:21,656 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:27:21,736 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:28:44,064 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:28:44,145 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:31:32,449 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:31:32,531 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:37:31,315 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-05 21:37:31,385 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 12:31:28,090 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 12:31:28,159 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 19:45:12,948 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 19:45:13,058 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 21:53:56,300 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 21:53:56,422 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 21:56:18,319 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 21:56:18,416 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 21:57:40,045 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-09 21:57:40,124 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-13 16:27:49,353 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-13 16:37:31,809 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-13 16:37:31,893 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-13 16:37:46,655 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-13 16:44:53,286 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-13 16:46:27,848 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1043, in create_server
+    sock.bind(sa)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 467, in run_until_complete
+    return future.result()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 294, in result
+    raise self._exception
+  File "d:\anaconda3\envs\rasa\lib\asyncio\tasks.py", line 240, in _step
+    result = coro.send(None)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1047, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-13 16:46:47,336 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1043, in create_server
+    sock.bind(sa)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 467, in run_until_complete
+    return future.result()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 294, in result
+    raise self._exception
+  File "d:\anaconda3\envs\rasa\lib\asyncio\tasks.py", line 240, in _step
+    result = coro.send(None)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1047, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-13 16:47:00,837 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1043, in create_server
+    sock.bind(sa)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 467, in run_until_complete
+    return future.result()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 294, in result
+    raise self._exception
+  File "d:\anaconda3\envs\rasa\lib\asyncio\tasks.py", line 240, in _step
+    result = coro.send(None)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1047, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-15 22:08:44,773 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-15 22:08:44,889 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-15 22:20:15,536 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-15 22:22:55,543 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 21:14:12,882 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 21:14:13,264 [ERROR]  Exception occurred while handling uri: 'ws://localhost:5005/socket.io/?EIO=3&transport=websocket&sid=cc31d031867d46bca562d397d772add3'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_server.py", line 220, in handle_request
+    packets = await socket.handle_get_request(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 89, in handle_get_request
+    return await getattr(self, '_upgrade_' + transport)(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 128, in _upgrade_websocket
+    return await ws(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\async_drivers\sanic.py", line 122, in __call__
+    await self.handler(self)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 233, in _websocket_handler
+    await self.queue.put(None)  # unlock the writer task so it can exit
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 141, in put
+    return self.put_nowait(item)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 153, in put_nowait
+    self._wakeup_next(self._getters)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 74, in _wakeup_next
+    waiter.set_result(None)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 352, in set_result
+    self._schedule_callbacks()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 262, in _schedule_callbacks
+    self._loop.call_soon(callback, self)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 573, in call_soon
+    self._check_closed()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 357, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2019-10-19 21:14:13,275 [ERROR]  SPF caught an error that should have been caught by Sanic response handler.
+2019-10-19 21:14:13,276 [ERROR]  
+2019-10-19 21:24:33,276 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 21:25:50,927 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-19 21:27:43,153 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 21:29:54,433 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-19 21:29:54,516 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-19 21:37:30,538 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 21:49:52,861 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 22:37:45,937 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-19 22:37:46,228 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-19 22:38:53,562 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 22:41:07,669 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-19 22:42:46,698 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-19 22:42:46,843 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-20 11:26:07,834 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-20 11:26:07,932 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-20 12:11:44,800 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-20 19:18:44,285 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1043, in create_server
+    sock.bind(sa)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 467, in run_until_complete
+    return future.result()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 294, in result
+    raise self._exception
+  File "d:\anaconda3\envs\rasa\lib\asyncio\tasks.py", line 240, in _step
+    result = coro.send(None)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1047, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
+2019-10-20 19:23:33,791 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-20 19:31:27,818 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-20 19:33:46,547 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-20 19:36:11,069 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-20 19:48:06,909 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 14:15:10,439 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 14:23:05,076 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:25:13,375 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 14:25:58,605 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:30:26,597 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:31:43,534 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:35:27,885 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:38:17,986 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:40:04,807 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 14:42:48,239 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:44:05,047 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:44:54,854 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:47:18,901 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:50:45,990 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:52:12,807 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 14:53:12,455 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:56:34,067 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 14:58:17,415 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 15:00:53,353 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 15:00:53,648 [ERROR]  Exception occurred while handling uri: 'ws://localhost:5005/socket.io/?EIO=3&transport=websocket&sid=5c77e426aa7d4a1bb634ea09394a4ae0'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_server.py", line 220, in handle_request
+    packets = await socket.handle_get_request(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 89, in handle_get_request
+    return await getattr(self, '_upgrade_' + transport)(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 128, in _upgrade_websocket
+    return await ws(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\async_drivers\sanic.py", line 122, in __call__
+    await self.handler(self)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 233, in _websocket_handler
+    await self.queue.put(None)  # unlock the writer task so it can exit
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 141, in put
+    return self.put_nowait(item)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 153, in put_nowait
+    self._wakeup_next(self._getters)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 74, in _wakeup_next
+    waiter.set_result(None)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 352, in set_result
+    self._schedule_callbacks()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 262, in _schedule_callbacks
+    self._loop.call_soon(callback, self)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 573, in call_soon
+    self._check_closed()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 357, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2019-10-26 15:00:53,655 [ERROR]  SPF caught an error that should have been caught by Sanic response handler.
+2019-10-26 15:00:53,655 [ERROR]  
+2019-10-26 15:02:19,922 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 19:59:53,977 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 21:52:21,631 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 21:54:40,811 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-26 22:06:07,354 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-26 22:10:47,891 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 14:39:15,070 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 14:43:02,564 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 14:44:24,310 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 15:13:12,378 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 15:14:56,843 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 15:17:36,822 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 15:23:56,075 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 15:25:15,164 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 15:26:49,477 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 15:28:09,984 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 15:29:43,072 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 15:33:37,854 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 15:46:04,273 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 15:59:24,471 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 16:04:21,071 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 16:05:43,731 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 16:06:23,472 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 16:07:53,141 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 16:09:48,070 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 16:11:01,373 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 16:11:01,424 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-10-27 16:12:19,620 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 16:12:20,016 [ERROR]  Exception occurred while handling uri: 'ws://localhost:5005/socket.io/?EIO=3&transport=websocket&sid=9975833d5ad74cd1824c55eda2957329'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_server.py", line 220, in handle_request
+    packets = await socket.handle_get_request(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 89, in handle_get_request
+    return await getattr(self, '_upgrade_' + transport)(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 128, in _upgrade_websocket
+    return await ws(environ)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\async_drivers\sanic.py", line 122, in __call__
+    await self.handler(self)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\asyncio_socket.py", line 233, in _websocket_handler
+    await self.queue.put(None)  # unlock the writer task so it can exit
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 141, in put
+    return self.put_nowait(item)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 153, in put_nowait
+    self._wakeup_next(self._getters)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\queues.py", line 74, in _wakeup_next
+    waiter.set_result(None)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 352, in set_result
+    self._schedule_callbacks()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\futures.py", line 262, in _schedule_callbacks
+    self._loop.call_soon(callback, self)
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 573, in call_soon
+    self._check_closed()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 357, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2019-10-27 16:12:20,026 [ERROR]  SPF caught an error that should have been caught by Sanic response handler.
+2019-10-27 16:12:20,027 [ERROR]  
+2019-10-27 16:14:32,116 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-10-27 16:17:30,147 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "d:\anaconda3\envs\rasa\lib\asyncio\base_events.py", line 1389, in _run_once
+    event_list = self._selector.select(timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "d:\anaconda3\envs\rasa\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "d:\anaconda3\envs\rasa\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
